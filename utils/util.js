@@ -1,3 +1,5 @@
+const moment = require("./moment.js");
+
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -14,6 +16,11 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const parseDate = dateStr => {
+  return new Date(moment(dateStr).format('YYYY/MM/DD HH:mm:ss'));
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  parseDate: parseDate
 }

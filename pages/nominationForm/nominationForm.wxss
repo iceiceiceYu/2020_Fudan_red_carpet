@@ -1,0 +1,229 @@
+/* pages/nominationForm/nominationForm.wxss */
+#page {
+  width: 100%;
+  overflow-x:hidden;
+  background: #F8F8F8;
+}
+
+.promptInfo{
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #9B9B9B;
+  height: 28rpx;
+  width: 710rpx;
+  overflow-x:hidden;
+  box-sizing: border-box;
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+  margin-bottom: 18rpx;
+  overflow: hidden;
+}
+
+form .oneLineDisplay{
+  align-items: center;
+  background: #fff;
+  box-sizing: border-box;
+  height: 87rpx;
+  padding: 26rpx 40rpx;
+  width: 750rpx;
+  margin: 0 !important;
+}
+
+form .oneLineDisplay.uploadPhoto {
+  height: 116rpx;
+  margin-bottom: 26rpx;
+}
+
+.redStar {
+  color: red;
+  font-size: 34rpx;
+  line-height: 34rpx;
+}
+
+form.multiLineDisplay{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-sizing: border-box;
+  height: 87rpx;
+  width: 750rpx;
+  margin: 0 !important;
+}
+
+.oneLineInput{
+  margin-left: 28rpx;
+  caret-color: rgb(232, 203, 74);
+  font-size: 34rpx;
+  line-height: 34rpx;
+  height: 34rpx;
+  width: 400rpx;
+}
+
+.oneLineInput.nominatorName {
+  margin-left: 62rpx;
+}
+
+
+.rawText{
+  margin-right: 8rpx;
+  font-weight: 500;
+  font-size: 34rpx;
+  line-height: 34rpx;
+}
+
+.multiLineDisplay {
+  background: #fff;
+  /* padding: 26rpx 40rpx; */
+}
+
+.multiLineDisplay .rawText {
+  margin-bottom: 12rpx;
+  padding-top: 26rpx;
+  padding-left: 40rpx;
+}
+
+.multiLineDisplay .oneLineDisplay .rawText {
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.placeholderColor {
+  color: #B2B2B2;
+}
+
+#detailInfo{
+  margin: 0rpx;
+  font-size: 34rpx;
+  background: #fff;
+  width: 750rpx;
+  /* padding: 0rpx 30rpx 32rpx;
+  margin-top: -5rpx; */
+  line-height: 1.5;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.iostextarea {
+  padding: 0rpx 30rpx 32rpx;
+  margin-top: -5rpx;
+}
+
+.androidtextarea {
+  padding: 0rpx 40rpx 32rpx;
+  margin-top: 0;
+}
+
+#innerInfo{
+  margin-left: 40rpx;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #B2B2B2;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Roboto, Arial, PingFang SC, Hiragino Sans GB, Source Han Sans SC, Source Han San CN, 思源黑体 CN, Microsoft Yahei, Microsoft JhengHei, sans-serif;
+  /* margin: 40rpx; */
+}
+
+#photo{
+  margin-left: 25rpx;
+  height: 500rpx;
+}
+
+#submitButton{
+  margin: 40rpx; 
+  margin-top: 50rpx;
+  margin-bottom: 100rpx;
+  color:white;
+  font-size: 40rpx;
+}
+
+.noMargin {
+  margin: 0 !important;
+}
+
+.submitButtonHover {
+  background: #CA483C;
+  color: #F9D9D9 !important;
+}
+
+#imgUpload{
+  height: 116rpx;
+  width: 116rpx;
+  margin-top: 20rpx;
+  margin-bottom: 4rpx;
+}
+
+.uploadPhoto {
+  display: flex;
+  padding: 0 40rpx 26rpx;
+}
+
+#photo-0{
+  margin-top: 20rpx;
+  height: 116rpx;
+  width: 116rpx;
+  border-radius: 6rpx;
+  margin-right: 28rpx;
+  margin-bottom: -4rpx;
+}
+
+#photo-1{
+  margin-top: 20rpx;
+  height: 116rpx;
+  width: 116rpx;
+  border-radius: 6rpx;
+  margin-right: 28rpx;
+  margin-bottom: -4rpx;
+}
+
+button[disabled] {
+  color: #fff !important;
+  background: #FFBEB8 !important;
+}
+
+button[disabled]::after {
+  border: none;
+}
+
+.tagLengthPrompt{
+  color:#B2B2B2;
+  font-size: 28rpx;
+  width: auto;
+  /* margin-right: 40rpx; */
+  margin-left: auto;
+}
+
+.storyLengthPrompt{
+  color:#B2B2B2;
+  font-size: 28rpx;
+  /* margin-left: 350rpx; */
+  padding-bottom: 10rpx;
+  text-align: right;
+  width: 140rpx;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.deleteImageIcon{
+  background: rgba(0,0,0,0.4);
+  border-radius: 0 6rpx 0 6rpx;
+  height: 38rpx;
+  width: 38rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-top: 20rpx;
+  margin-left: 78rpx;
+  z-index: 100;
+}
+
+.deleteButton{
+  height: 18rpx;
+  width: 18rpx;
+  opacity: 0.9;
+}
+
+.relativeView{
+  position: relative;
+}

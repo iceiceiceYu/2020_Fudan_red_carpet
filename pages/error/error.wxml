@@ -1,0 +1,9 @@
+<view class='page'>
+  <!-- <view class='title'>已通过</view> -->
+  <view class='errorView'>
+    <image  src='../../image/no_nominations.png' id='warningImg'></image>
+    <view class='warningText'>Oops...小程序被你的热情冲垮了</view>
+    <text class='smallWarningText'>放轻松，我们正在紧急修复，\n你的提名和票数已被牢记于心。</text>
+    <!-- <view class='smallWarningText'></view> -->
+  </view>
+</view>

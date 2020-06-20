@@ -9,14 +9,11 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false,
-		"coverView": true,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false
+		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.10.2",
-	"appid": "wx8f88bf4394f84433",
+	"libVersion": "2.6.6",
+	"appid": "wx34151e244821317d",
 	"projectname": "2020_Fudan_red_carpet",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -30,6 +27,10 @@
 			"list": []
 		},
 		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
 			"current": -1,
 			"list": []
 		},

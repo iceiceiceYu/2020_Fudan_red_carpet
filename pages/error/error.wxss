@@ -1,0 +1,41 @@
+/* pages/error/error.wxss */
+page{
+  height: 100%;
+}
+
+.page{
+  height: 100%;
+}
+
+.errorView {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#warningImg {
+  width: 138rpx;
+  height: 136rpx;
+  margin-top: -120rpx;
+}
+
+.warningText {
+  font-size: 34rpx;
+  line-height: 34rpx;
+  margin-top: 40rpx;
+  color: #C0C0C7;
+  font-weight: 600;
+}
+
+.smallWarningText {
+  font-size: 26rpx;
+  line-height: 42rpx;
+  margin-top: 24rpx;
+  color: #C0C0C7;
+  font-weight: 400;
+  text-align: center;
+}

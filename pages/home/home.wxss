@@ -1,0 +1,362 @@
+/* pages/home/home.wxss */
+
+.topNavigator {
+  background: #F9F9F9;
+  position: fixed;
+  top: 0;
+  z-index: 103;
+  width: 100%;
+  /* height: 165rpx; */
+}
+
+.searchicon {
+  position: absolute;
+  z-index: 104;
+  left: 62rpx;
+  bottom: 34rpx;
+}
+
+#searchInput {
+  background: #EBEBEC;
+  border-radius: 100rpx;
+  width: 420rpx;
+  height: 64rpx;
+  /* margin-left: 40rpx; */
+  /* margin-top: 80rpx; */
+  padding-left: 60rpx;
+  position: absolute;
+  bottom: 16rpx;
+  left: 40rpx;
+  font-size: 30rpx;
+  color: #333333;
+  line-height: 30rpx;
+}
+
+.placeholderColor {
+  color: #8E8E93;
+  font-size: 30rpx;
+  line-height: 30rpx;
+}
+
+.paddingView{
+  height: 165rpx;
+}
+
+.mainImage {
+  width: 100%;
+  height: 342rpx;
+  z-index: 100;
+  margin-bottom: -8rpx;
+}
+
+.nomineesView {
+  width: 320rpx;
+}
+
+.votersView {
+  width: 320rpx;
+  margin-left: 30rpx;
+}
+
+.oneLineDisplay.noMarginView {
+  margin-top: 8rpx;
+  margin-left: 0rpx;
+  margin-bottom: 18rpx;
+  padding: 0 !important;
+}
+
+.numView {
+  font-size: 68rpx;
+  font-weight: 600;
+  color: #333333;
+  line-height: 1;
+}
+
+.peopleView {
+  margin-left: 10rpx;
+  margin-top: 29rpx;
+  font-size: 28rpx;
+  color: #333333;
+  font-weight: 500;
+}
+
+.yellowLine {
+  width: 100%;
+  height: 6rpx;
+}
+
+.overview {
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0rpx;
+  padding-top: 34rpx;
+}
+
+.selectButton {
+  font-size: 26rpx;
+  color: white;
+  width: 335rpx;
+  height: 54rpx;
+  line-height: 26rpx;
+  /* border-radius: 0rpx; */
+  border: 1px solid;
+  border-color: #FD5A4C;
+  box-sizing: border-box;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+#button1 {
+  border-radius: 0;
+  border-top-left-radius: 8rpx;
+  border-bottom-left-radius: 8rpx;
+}
+
+#button2 {
+  border-radius: 0;
+  border-top-right-radius: 8rpx;
+  border-bottom-right-radius: 8rpx;
+}
+
+#button1::after {
+  border: 0;
+}
+
+#button2::after {
+  border: 0;
+}
+
+.unselected {
+  background: white;
+  color: #FD5A4C;
+  /* border-radius: 0rpx; */
+}
+
+#hotestButton {
+  margin-left: 30rpx;
+  height: 60rpx;
+  font-size: 20rpx;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+}
+
+.fixedView {
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 102;
+  background: white;
+  width: 100%;
+  border-bottom: 1px solid linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 5.33%, rgba(245,245,245,1) 5.33%, rgba(245,245,245,1) 100%);
+}
+
+.absolutePosition {
+  margin-top: 0rpx;
+  background: white;
+  z-index: 102;
+  position: fixed;
+  width: 95%;
+  top: -5rpx;
+}
+
+.search input {
+  width: 300rpx;
+  border-radius: 30rpx;
+  background-color: rgb(247, 242, 238);
+}
+
+.search icon {
+  margin-top: 10rpx;
+}
+
+.oneLineDisplay {
+  z-index: 101;
+  /* margin-left: 0;
+  margin-right: 0;
+  padding-left: 20rpx;
+  padding-right: 20rpx; */
+  margin: 0;
+  padding: 36rpx 40rpx 2rpx;
+}
+
+.oneLineDisplay.nomineeIndex {
+  padding: 26rpx 40rpx 28rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* align-items: center; */
+}
+
+.overview .oneLineDisplay {
+  padding: 32rpx 0rpx;
+  margin: 0 auto;
+  border-bottom: 2rpx solid whitesmoke;
+}
+
+.leftAlignment{
+  padding-left: 0;
+}
+
+.leftView {
+  width: 200rpx;
+  overflow: display;
+}
+
+.idView {
+  background: #D8D8D8;
+  width: 104rpx;
+  height: 41rpx;
+  font-size: 26rpx;
+  text-align: left;
+  line-height: 26rpx;
+  color: white;
+  font-family: DinkieBitmap, -apple-system, BlinkMacSystemFont, Helvetica Neue, Roboto, Arial, PingFang SC, Hiragino Sans GB, Source Han Sans SC, Source Han Sans CN, Microsoft Yahei, Microsoft JhengHei, sans-serif;
+  padding: 7.5rpx 0 7.5rpx 10rpx;
+  box-sizing: border-box;
+}
+
+.nameView {
+  font-size: 34rpx;
+  line-height: 34rpx;
+  font-weight: 500;
+  /* width: auto; */
+  margin-top: 16rpx;
+  margin-bottom: 14rpx;
+  width: 495rpx;
+}
+
+.introView {
+  width: max-content;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #999999;
+}
+
+.rightView {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* margin-left: 60rpx;
+  margin-top: 26rpx; */
+}
+
+.votesView {
+  width: max-content;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #999999;
+  margin-top: 18rpx;
+  text-align: right;
+}
+
+.voteButton {
+  font-size: 30rpx;
+  font-weight: 600;
+  text-align: center;
+  height: 58rpx;
+  width: 126rpx;
+  line-height: 58rpx;
+  color: #FD5A4C;
+  border-radius: 30rpx;
+  margin-right: 0;
+}
+
+.themeColor.voteButton {
+  background: #FFF3F2;
+}
+
+.voteButton::after {
+    border: none;
+}
+
+button[disabled] {
+  color: #FEBAB4 !important;
+  background: #FFF6F5 !important;
+}
+
+button[disabled]::after {
+  border: none;
+}
+
+.voteButtonHover.themeColor.voteButton {
+  background: #999191;
+  color: #97362D;
+}
+
+.selectButtonHover {
+  background: #FEEFED;
+}
+
+.nomineeOnHover {
+  background: #ededed;
+}
+
+#paddingView {
+  height: 230rpx;
+}
+
+.smallText{
+  display: flex;
+  flex-direction: row;
+}
+.fixedWidth{
+  width: 40rpx;
+  text-align: center;
+}
+
+.bonusView{
+  margin-top: 40rpx;
+  height: 316rpx;
+  width: 670rpx;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.textView{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 24rpx;
+  width: 614rpx;
+  margin-left: 28rpx;
+  margin-right: 28rpx;
+}
+
+#bonusImage{
+  height: 316rpx;
+  width: 670rpx;
+  border-radius: 14rpx;
+}
+
+.bonusTitle{
+  font-size: 34rpx;
+  line-height: 34rpx;
+  font-weight: 600;
+  text-align: left;
+  color: white;
+}
+
+.bonusPrompt{
+  font-size: 26rpx;
+  line-height: 26rpx;
+  font-weight: 500;
+  margin-top: 15rpx;
+  color: white;
+  opacity: 0.5;
+}
+
+.bonusButton[disabled]{
+  background-color: #FFE7E6;
+  color: #FD5A4E;
+  opacity: 0.5;
+}

@@ -1,0 +1,65 @@
+/* pages/nomination/nomination.wxss */
+#QAImage {
+  width: 100%;
+  height: 342rpx;
+  margin-bottom: 10rpx;
+}
+
+.arrow{
+  width: 20rpx;
+  height: 20rpx;
+  border-top: 4rpx solid #D4D4D9;
+  border-right: 4rpx solid #D4D4D9;
+  right: 20rpx;
+  transform: rotate(45deg);
+  top:20rpx;
+  margin-left: 270rpx;
+  margin-top: 4rpx;
+}
+
+.fixedWidthVIew{
+  width: 400rpx;
+  display: flex;
+  height: 32rpx;
+  align-items: center;
+}
+
+.rawContent{
+  width: auto;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #333333;
+  margin-right: 16rpx;
+}
+
+.smallMargin {
+  margin: 0;
+  padding: 26rpx 40rpx;
+  height: 32rpx;
+}
+
+.divLine{
+  margin-left: 40rpx;
+  margin-right: auto;
+  width: 710rpx;
+}
+
+#notificationView{
+  background: #FF3B30;
+  border: 1px solid rgba(5,5,5,0.10);
+  color: white;
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 100rpx;
+  text-align: center;
+  font-size: 22rpx;
+  line-height: 22rpx;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewOnHover{
+  background: #EDEDED;
+}

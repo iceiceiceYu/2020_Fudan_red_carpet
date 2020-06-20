@@ -1,0 +1,58 @@
+<!--pages/detail/detail.wxml-->
+<wxs module="threeNum" src="../../utils/util.wxs"></wxs>
+
+<!-- <view class='wholePage' bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd'> -->
+
+<view class='wholePage'>
+  <!-- <image src='{{acodeSrc}}'></image>
+  <image src='{{tempPaht}}'></image> -->
+  <view wx:if='{{showShareImg>0}}' id='transparentView' catchtouchmove='true' animation="{{animationBgData}}"></view>
+  <view wx:if='{{showShareImg>0}}' id='shareBlock' catchtouchmove='true'  animation="{{animationData}}">
+    <view id='rawText'>分享此页为 TA 拉票</view>
+    <canvas style="width: 250px; height: 225px;" canvas-id="shareCanvas"></canvas>
+    <view class='controlButton'>
+      <button class='shareButton' hover-class="shareButtonHover" bindtap='hideShareImg'>取消</button>
+      <button class='shareButton' hover-class="shareButtonHover" bindtap='saveImgLocal'>保存至相册</button>
+    </view>
+  </view>
+
+  <view class='overview oneLineDisplay'>
+    <view class='leftView'>
+      <view class='idView'>#{{threeNum.add_zero_to_fourbits(candidate.id)}}</view>
+      <view class='nameView'>{{candidate.name}}</view>
+    </view>
+    <view class='rightView oneLineDisplay'>
+      <view class='numView'>{{threeNum.add_comma_toThousands(candidate.votes)}}</view>
+      <view class='ticket'>票</view>
+    </view>
+  </view>
+  <view class='introView'>{{candidate.introduction}}</view>
+
+  <view class='oneLineDisplay interactiveView'>
+    <button id='shareButton' hover-class='buttonOnHover' bindtap='actionSheetTap'><image src='../../image/share.png' id='shareImg'></image></button>
+    <view class='smallText promptView'><text>你今天还\n可以投 {{remainingVotes}} 次</text></view>
+    <button disabled='{{candidate.votable > 0 ? "" : "true"}}' class='themeColor voteButton' data-vote-id='{{candidate.id}}' catchtap='vote' hover-class="voteButtonHover">投票</button>
+  </view>
+  <view class='divLine'></view>
+  <view class='promptText'>复旦故事</view>
+  <view class='storyView'><text>{{candidate.story}}</text></view>
+  <view wx:if='{{candidate.photoUrl1 != ""}}' class='divLine'></view>
+  <view wx:if='{{candidate.photoUrl1 != ""}}' class='promptText'>照片墙</view>
+  <!-- <scroll-view scroll-x style='width: 100%;white-space: nowrap;'> -->
+  <view class='oneLineDisplay' id='imageView'>
+    <!-- <block wx:for='{{candidate.photoUrls}}'>
+      <image src='{{item}}' id="photo-{{index}}"  data-index='{{index}}' bindtap='previewImg'></image>
+    </block> -->
+    <image wx:if='{{candidate != undefined && candidate.photoUrl1 != ""}}' src='{{"https://yst.fudan.edu.cn/redCarpet/api/image/" + candidate.photoUrl1}}' id='photo-0' data-index='0' bindtap='previewImg' mode='aspectFill'></image>
+    <image wx:if='{{candidate != undefined && candidate.photoUrl2 != ""}}' src='{{"https://yst.fudan.edu.cn/redCarpet/api/image/" + candidate.photoUrl2}}' id='photo-1' data-index='1' bindtap='previewImg' mode='aspectFill'></image>
+  </view>
+  <!-- </scroll-view> -->
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange" catchtouchmove='true'>
+  <action-sheet-item class="fullItem" bindtap="bindItemTap"><button open-type='share' class='noStyle' hover-class='itemOnHover'>分享给好友</button></action-sheet-item>
+  <action-sheet-item class="fullItem" bindtap="showShareImg"><view class='paddingModify'>生成朋友圈海报</view></action-sheet-item>
+  <view style='height:{{cancelHeight}}rpx;' >
+    <action-sheet-cancel>取消</action-sheet-cancel>
+  </view>
+</action-sheet>
+</view>

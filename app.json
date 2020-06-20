@@ -1,14 +1,36 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/home/home",
+    "pages/error/error",
+    "pages/nominationForm/nominationForm",
+    "pages/nomination/nomination",
+    "pages/nominationState/nominationState",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#F9F9F9",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
+  "tabBar": {
+    "color": "#8E8E93",
+    "selectedColor": "#FD5A4C",
+    "backgroundColor": "#F9F9F9",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "投票",
+        "iconPath": "image/vote_unselected.png",
+        "selectedIconPath": "image/vote_selected.png"
+      },
+      {
+        "pagePath": "pages/nomination/nomination",
+        "text": "提名",
+        "iconPath": "image/nominate_unselected.png",
+        "selectedIconPath": "image/nominate_selected.png"
+      }
+    ]
+  },
   "sitemapLocation": "sitemap.json"
 }

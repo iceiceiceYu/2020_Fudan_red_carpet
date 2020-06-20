@@ -1,0 +1,66 @@
+<!--pages/nominationForm/nominationForm.wxml-->
+<view id='page'>
+
+<view class='promptInfo'>以下内容会成为投票网站展示内容</view>
+<view class="divLine fullWidth"></view>
+<form bindsubmit='formSubmit'>
+  <view class='oneLineDisplay'>
+    <view class='rawText'>提名对象</view>
+    <view class='redStar'>*</view>
+    <input name="name" class='oneLineInput' bindinput='nameInput' bindblur='saveName' value='{{name}}'></input>
+  </view>
+  <view class="divLine innerLine"></view>
+  <!-- <view class='oneLineDisplay'>
+    <view class='rawText'>提名者</view>
+    <input name="name2" placeholder='选填' class='oneLineInput'></input>
+  </view>
+  <view class="divLine"></view> -->
+  <view class='oneLineDisplay'>
+    <view class='rawText'>提名标签</view>
+    <view class='redStar'>*</view>
+    <input name="introduction" placeholder='不超过 15 字' placeholder-class='placeholderColor' class='oneLineInput' bindinput='introductionInput' bindblur='saveIntroduction' value='{{introduction}}'></input>
+    <view wx:if='{{tagLength>0}}' class='tagLengthPrompt'>{{tagLength}}/15</view>
+  </view>
+  <view class="divLine innerLine"></view>
+  <view class='multiLineDisplay'>
+    <view class='oneLineDisplay noMargin' style='z-index: 101;'>
+      <view class='rawText'>复旦故事</view>
+      <view class='redStar'>*</view>
+      <view wx:if='{{storyLength>0}}' class='storyLengthPrompt'>{{storyLength}}/200</view>
+    </view>
+    <textarea name="story" placeholder='不超过 200 字，请用第三人称叙述' placeholder-class='placeholderColor' show-confirm-bar='{{false}}' id='detailInfo' class="{{detail ? 'iostextarea'  : 'androidtextarea'}}" maxlength='200' bindinput='storyInput' bindblur='saveStory' value='{{story}}'></textarea>
+  </view>
+  <view class="divLine innerLine"></view>
+  <view class='multiLineDisplay'>
+    <view class='rawText'>照片展示</view>
+    <text  id='innerInfo'>最多可上传两张尺寸各小于 10 MB 的照片</text>
+    <view class='uploadPhoto'>
+      <block wx:for='{{photoUrls}}'>
+        <view data-index='{{index}}' catchlongtap='deleteImage' catchtouchend='touchend' class='relativeView'>
+          <view data-index='{{index}}' class='deleteImageIcon' catchtap='deleteImagewithCheck'><image src='../../image/delete_button.png' class='deleteButton'></image></view>
+          <image src='{{item}}' id="photo-{{index}}" mode='aspectFill' data-index='{{index}}' bindtap='previewImg'></image>
+        </view>
+      </block>
+      <image wx:if='{{photoUrls.length < 2}}' id='imgUpload' bindtap='uploadPhoto' src='../../image/img_upload.png'></image>
+    </view>
+  </view>
+  <view class="divLine fullWidth"></view>
+  <view class='promptInfo'>以下内容不公开，方便工作人员后续联系到您</view>
+  <view class="divLine fullWidth"></view>
+  <view class='oneLineDisplay'>
+    <view class='rawText'>联系人</view>
+    <view class='redStar'>*</view>
+    <input name="nominatorName"  class='oneLineInput nominatorName' cursor-spacing='10rpx' bindinput='nominatorNameInput' bindblur='saveNominatorName' value='{{nominatorName}}'></input>
+  </view>
+  <view class="divLine innerLine"></view>
+  <view class='oneLineDisplay'>
+    <view class='rawText'>手机号码</view>
+    <view class='redStar'>*</view>
+    <input name="nominatorPhone" class='oneLineInput' maxlength='11' cursor-spacing='10rpx' type='number' bindinput='nominatorPhoneInput' bindblur='saveNominatorPhone' value='{{nominatorPhone}}'></input>
+  </view>
+  <view class="divLine fullWidth"></view>
+  <view>
+    <button disabled='{{submitable > 0 ? "" : "true"}}' form-type='submit' id='submitButton' class='themeColor' hover-class='submitButtonHover'>提交审核</button>
+  </view>
+</form>
+</view>

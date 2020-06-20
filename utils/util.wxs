@@ -1,0 +1,30 @@
+var threeNum = {
+  add_comma_toThousands: function (num) {
+    var num = (num || 0).toString();
+    var result = '';
+    while (num.length > 3) {
+      result = ',' + num.slice(-3) + result;
+      num = num.slice(0, num.length - 3);
+    }
+    if (num) { result = num + result; }
+    return result;
+  },
+  add_zero_to_fourbits: function (num) {
+    for (var len = (num + "").length; len < 4; len = num.length) {
+      num = "0" + num;
+    }
+    return num;
+  }
+}
+
+// var timeFormat = {
+//   format_string_time: function (timeString) {
+//     var t = new Date(timeString);
+//     return t.getFullYear();
+//   }
+// }
+
+module.exports = {
+  add_comma_toThousands: threeNum.add_comma_toThousands,
+  add_zero_to_fourbits: threeNum.add_zero_to_fourbits
+}

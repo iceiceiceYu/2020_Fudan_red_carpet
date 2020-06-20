@@ -1,0 +1,121 @@
+/* pages/nominationState/nominationState.wxss */
+page {
+  height: 100%;
+}
+
+.page {
+  height: 100%;
+}
+
+.nameView{
+  font-size: 34rpx;
+  line-height: 34rpx;
+  font-weight: 500;
+  margin-left: 0;
+  width: auto;
+  flex-shrink: 10000;
+  margin-right: 20rpx;
+}
+
+.auditPassView{
+  margin-left: 50rpx;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.rawText {
+  margin-left: 40rpx;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #999999;
+}
+
+.rawText + .rawText {
+  margin-top: 12rpx;
+}
+
+.titleRow {
+  margin: 30rpx 40rpx 24rpx;
+}
+
+.greenCircle{
+  width: 22rpx;
+  height: 22rpx;
+  border-radius: 100rpx;
+  background: #6CD400;
+  border: 1px solid rgba(5,5,5,0.10);
+  /* margin-left: 450rpx; */
+}
+
+.yellowCircle{
+  width: 22rpx;
+  height: 22rpx;
+  border-radius: 100rpx;
+  background: #FFCC00;
+  border: 1px solid rgba(5,5,5,0.10);
+}
+
+.redCircle {
+  width: 22rpx;
+  height: 22rpx;
+  border-radius: 100rpx;
+  background: #FF3B30;
+  border: 1px solid rgba(5,5,5,0.10);
+  /* margin-left: 270rpx; */
+  /* margin-top: 30rpx; */
+}
+
+.oneLineDisplay.titleRow {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stateIcon {
+  display: flex;
+  align-items: center;
+  height: 26rpx;
+  align-self: flex-start;
+}
+
+.smallText.stateView {
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #999999;
+  font-weight: 400;
+  margin-left: 12rpx;
+  margin-top: 0;
+  width: auto;
+}
+
+.divLine {
+  margin-top: 30rpx;
+  width: 670rpx; 
+  margin-left: auto;
+  margin-right: auto;
+  height: 2rpx;
+  background: whitesmoke;
+}
+
+.noStateView {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#noStateImg {
+  width: 138rpx;
+  height: 136rpx;
+  margin-top: -120rpx;
+}
+
+.warningText {
+  font-size: 34rpx;
+  line-height: 34rpx;
+  margin-top: 40rpx;
+  color: #C0C0C7;
+  font-weight: 600;
+}

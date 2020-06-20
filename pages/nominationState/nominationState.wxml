@@ -1,0 +1,62 @@
+<!--pages/nominationState/nominationState.wxml-->
+<template name='passed'>
+  <view class='oneLineDisplay titleRow'>
+    <view class='nameView'>{{item.name}}</view>
+    <view class='stateIcon'>
+    <view class='greenCircle'></view>
+    <view class='smallText stateView'>已通过</view>
+    </view>
+  </view>
+  <view class='rawText'>审核时间：{{item.reviewedTime != null ? item.reviewedTime : "暂无"}}</view>
+  <view class='rawText'>提交时间：{{item.nominatingTime}}</view>
+  <view class='divLine'></view>
+</template>
+
+<template name='auditing'>
+  <view class='oneLineDisplay titleRow'>
+    <view class='nameView'>{{item.name}}</view>
+    <view class='stateIcon'>
+    <view class='yellowCircle'></view>
+    <view class='smallText stateView'>审核中</view>
+    </view>
+  </view>
+  <view class='rawText'>审核时间：{{item.reviewedTime != null ? item.reviewedTime : "暂无"}}</view>
+  <view class='rawText'>提交时间：{{item.nominatingTime}}</view>
+  <view class='divLine'></view>
+</template>
+
+<template name='rejected'>
+  <view class='oneLineDisplay titleRow'>
+    <view class='nameView'>{{item.name}}</view>
+    <view class='stateIcon'>
+    <view class='redCircle'></view>
+    <view class='smallText stateView'>已驳回</view>
+    </view>
+  </view>
+  <view class='rawText'>审核时间：{{item.reviewedTime != null ? item.reviewedTime : "暂无"}}</view>
+  <view class='rawText'>提交时间：{{item.nominatingTime}}</view>
+  <view class='divLine'></view>
+</template>
+
+
+<view class='page'>
+  <!-- <view class='title'>已通过</view> -->
+  <view wx:if='{{nominationList.length == 0}}' class='noStateView'>
+    <image  src='../../image/no_nominations.png' id='noStateImg'></image>
+    <view class='warningText'>你尚未提名任何人</view>
+  </view>
+
+  <block wx:if='{{nominationList.length > 0}}' wx:for="{{nominationList}}">
+
+    <template wx:if='{{item.state == "PASSED"}}' is='passed' data='{{item}}' />
+    <template wx:elif='{{item.state == "PENDING"}}' is='auditing' data='{{item}}' />
+    <template wx:elif='{{item.state == "REJECTED"}}' is='rejected' data='{{item}}' />
+    <!-- <view class='auditPassView'>
+      <view class='rawText'>通过时间: {{item.passTime}} </view>
+      <view class='rawText'>提交时间: {{item.submitTime}} </view>
+      <view class='rawText'>提名对象: {{item.name}} </view>
+    </view> -->
+  </block>
+  <!-- <view class='title'>待审核</view> -->
+</view>
+
