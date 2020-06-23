@@ -1,0 +1,9 @@
+- mysql数据库 redcarpet 表字符集设置为 utf8mb4
+- 支持**中文**、**各国语言**、**emoji**
+- 重置数据库时需要重置相应的*_seq
+  - **nominee_seq**
+- wx open api errcode [link](https://blog.csdn.net/qq_19707521/article/details/52153461)
+- 防刷票机制建议：
+  - 使用非对称加密避免后端api的暴露
+  - 使用小程序端使用手机或者邮箱验证登陆加大刷票成本
+  - 对票数进行实时监控

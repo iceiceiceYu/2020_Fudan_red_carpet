@@ -1,0 +1,38 @@
+{
+  "name": "red-carpet-admin",
+  "version": "1.0.1",
+  "private": true,
+  "dependencies": {
+    "@amcharts/amcharts4": "^4.4.4",
+    "antd": "^3.16.1",
+    "axios": "^0.18.0",
+    "canvasjs": "^1.8.1",
+    "chart.js": "^1.1.1",
+    "js2excel": "^1.0.1",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.23",
+    "react": "^16.8.6",
+    "react-chartjs": "^1.2.0",
+    "react-dom": "^16.8.6",
+    "react-google-chart": "^0.1.2",
+    "react-google-charts": "^3.0.11",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
+    "recharts": "^1.5.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
