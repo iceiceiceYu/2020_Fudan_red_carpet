@@ -7,7 +7,7 @@
     "antd": "^3.16.1",
     "axios": "^0.18.0",
     "canvasjs": "^1.8.1",
-    "chart.js": "^1.1.1",
+    "chart.js": "^2.9.4",
     "js2excel": "^1.0.1",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.23",
