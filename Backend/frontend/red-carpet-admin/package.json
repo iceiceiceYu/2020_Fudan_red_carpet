@@ -9,7 +9,7 @@
     "canvasjs": "^1.8.1",
     "chart.js": "^1.1.1",
     "js2excel": "^1.0.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.23",
     "react": "^16.8.6",
     "react-chartjs": "^1.2.0",
